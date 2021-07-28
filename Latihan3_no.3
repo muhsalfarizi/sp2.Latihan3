@@ -1,0 +1,41 @@
+var human = {
+    "1. Abduh Muhammad" : [
+        "Abduh",
+        "Muhammad",
+        "male",
+        1992,
+    ],
+    "2. Ahmad Taufik" : [
+        "Ahmad",
+        "Taufik",
+        "male",
+        1985
+    ]
+   
+}
+
+function arrayToObject(arr){
+    var date = new Date()
+    var tahun1 = date.getFullYear() - arr["1. Abduh Muhammad"][3]
+    var tahun2 = date.getFullYear() - arr["2. Ahmad Taufik"][3]
+
+    var human1 = {
+        firstName : arr["1. Abduh Muhammad"][0],
+        lastName : arr["1. Abduh Muhammad"][1],
+        gender : arr["1. Abduh Muhammad"][2],
+        age : tahun1
+    }
+
+    var human2 = {
+        firstName : arr["2. Ahmad Taufik"][0],
+        lastName : arr["2. Ahmad Taufik"] [1],
+        gender : arr["2. Ahmad Taufik"] [2],
+        age : tahun2
+    }
+    
+    console.log('1. Abduh Muhammad : ',human1);
+    console.log('\n');
+    console.log('2. Ahmad Taufik : ',human2);
+    
+}
+arrayToObject(human);
